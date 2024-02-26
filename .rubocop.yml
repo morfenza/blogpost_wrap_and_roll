@@ -1,0 +1,34 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+AllCops:
+  NewCops: enable
+  Exclude:
+    - './bundle/**/*'
+    - './config/environments/**'
+    - './bin/*'
+    - './db/schema.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - db/**/*
+Metrics/BlockLength:
+  Max: 20
+  Exclude:
+    - /spec/**/*
+Metrics/AbcSize:
+  Exclude:
+    - db/**/*
+
+RSpec/NestedGroups:
+  Max: 5
+RSpec/ExampleLength:
+  Max: 10
+
