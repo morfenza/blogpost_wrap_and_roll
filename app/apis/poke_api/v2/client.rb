@@ -14,13 +14,45 @@ module PokeApi
         )
       end
 
+      def get_berry(berry_name)
+        request(
+          http_method: :get,
+          endpoint: "berry/#{berry_name}"
+        )
+      end
+
+      def get_item(item_name)
+        request(
+          http_method: :get,
+          endpoint: "item/#{item_name}"
+        )
+      end
+
+      # This method is just for an example, it does not work!!
+      def create_pokemon(params)
+        request(
+          http_method: :post,
+          endpoint: '/pokemon',
+          body: {
+            name: params[:pokemon_name],
+            height: params[:pokemon_height],
+            weight: params[:pokemon_weight],
+            locations: {
+              # ...
+            }
+          }
+        )
+      end
+
       private
 
       def client
         @client ||= begin
           options = {
-            open_timeout: 10,
-            read_timeout: 10
+            request: {
+              open_timeout: 10,
+              read_timeout: 10
+            }
           }
           Faraday.new(url: POKE_API_BASE_URL, **options) do |config|
             config.request :json
@@ -37,6 +69,8 @@ module PokeApi
           status: response.status,
           body: response.body
         }
+      rescue Faraday::Error => e
+        puts e
       end
     end
   end
