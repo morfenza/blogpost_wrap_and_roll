@@ -1,24 +1,19 @@
-# README
+# Wrap and Roll
+This is the repo for the blogpost @ CodeMiner42! Here you can see in details the app used for all that was written in the blog.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Useful Links
+* [Blogpost]() # TBA
+* [Faraday Gem](https://github.com/lostisland/faraday)
+* [VCR Gem](https://github.com/vcr/vcr)
 
-Things you may want to cover:
+## Usage
+Running
+```console
+$ bundle install
+$ rails -s
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Testing
+```console
+$ bundle exec rspec -fd
+```
