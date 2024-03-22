@@ -70,7 +70,10 @@ module PokeApi
           body: response.body
         }
       rescue Faraday::Error => e
-        puts e
+        raise ApiError.new(
+          message: e.message,
+          faraday_error_class: e.class
+        )
       end
     end
   end
