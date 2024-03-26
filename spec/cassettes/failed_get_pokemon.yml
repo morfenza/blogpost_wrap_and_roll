@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pokeapi.co/api/v2/pokemon/antedeguemon
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Fri, 22 Mar 2024 15:15:10 GMT
+      content-type:
+      - text/plain; charset=utf-8
+      content-length:
+      - '9'
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - public, max-age=3600, s-maxage=3600
+      etag:
+      - W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+      function-execution-id:
+      - ilimyqjbji1d
+      x-cloud-trace-context:
+      - e383b22a815635040e678e2182464b3d
+      x-powered-by:
+      - Express
+      x-served-by:
+      - cache-mia-kmia1760059-MIA
+      x-cache:
+      - MISS
+      x-cache-hits:
+      - '0'
+      x-timer:
+      - S1711120232.004862,VS0,VE1442
+      vary:
+      - Accept-Encoding, x-fh-requested-host, accept-encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - HIT
+      age:
+      - '277'
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=VprNCZSagdUgT3VEiE6szr83vsu4OG0QzZjl76LjYDvCOeZriO%2B%2BRn%2FWHsMVSb3opXVSK%2F%2FDhF0Q6pB3QRhDo%2FALrPpgAMXqgSdrS3d%2F1cSWiUzTMzH18yzxtqbylPoJ9V%2FLik3Pbq7Q"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 868722b77cffa793-EZE
+    body:
+      encoding: UTF-8
+      string: Not Found
+  recorded_at: Fri, 22 Mar 2024 15:15:10 GMT
+recorded_with: VCR 6.2.0
