@@ -74,6 +74,8 @@ We'll tacke at three resources/endpoints: _**Pokemons**_, _**Berries**_ and _**I
 -> GET https://pokeapi.co/api/v2/item/{id or name}/
 ```
 
+Here is how we'll define the attributes for each model, based on the value and data type returned by the API.
+
 For the **Pokemon** endpoint we'll want to save the following information:
   * **Name**: _String_
   * **Height**: _Integer_
@@ -330,13 +332,12 @@ $ response = connection.get_pokemon('agumon')
     date: "Thu, 21 Mar 2024 17:57:20 GMT"
     ...
     Not Found
-    the server responded with status 404
-    -> nil
-
-$ response
-=> nil
+    
+    /.../faraday/response/raise_error.rb: the server responded with status 404 (Faraday::ResourceNotFound)
 ```
-The error is rescued and printed, there are different ways to save and handle a "negative" response, but for now, that will do, let's create our next endpoints!
+We receive an exception raised by Faraday based on the 404 response we got from the API! In the next part of this blog we'll deal with error handling, so don't sleep on it for now!
+
+Anyways, let us finish the other endpoints
 
 ```rb
 # client.rb
